@@ -33,7 +33,7 @@ header {background:#b22222;color:white;text-align:center;padding:16px;}
 .offer-card {border:2px solid #ccc;border-radius:10px;padding:12px;text-align:center;margin-bottom:12px;cursor:pointer;}
 .offer-card.selected {border-color:#b22222;background:#fff6f6;}
 .form-section {background:#fafafa;padding:20px;border-radius:12px;border:1px solid #eee;}
-input,textarea {width:100%;padding:12px;margin-bottom:12px;border:1px solid #ccc;border-radius:8px;font-size:16px;}
+input,textarea,select {width:100%;padding:12px;margin-bottom:12px;border:1px solid #ccc;border-radius:8px;font-size:16px;}
 button {width:100%;background:#b22222;color:white;padding:14px;border:none;border-radius:10px;font-size:18px;cursor:pointer;transition:all 0.3s ease;}
 button:disabled {opacity:0.8;cursor:not-allowed;}
 .success {display:none;text-align:center;color:green;font-weight:bold;margin-top:10px;}
@@ -42,80 +42,90 @@ footer {text-align:center;color:#777;font-size:14px;padding:20px;}
 </head>
 <body>
 <header><h1>مجموعة كارسيل الأصلية لإصلاح الشعر التالف</h1></header>
+
 <section class="hero">
 <img src="image1.jpg" alt="مجموعة كارسيل">
 <p>احصلي على شعر ناعم وصحي مع مجموعة كارسيل الإيطالية – الحل الأمثل للفرد والترميم والتغذية العميقة.</p>
 </section>
+
 <section class="content">
 <p style="text-align:center;font-weight:bold;color:#b22222;">✨ اختاري العرض المناسب قبل إدخال بياناتك ✨</p>
+
 <div class="offer-card selected" data-offer="الماسك + السيروم — 599ج">
 <h2>💆‍♀️ عرض 1: الماسك + السيروم</h2>
 <p>599 جنيه فقط – شامل الشحن عند الدفع عند الاستلام</p>
 </div>
+
 <div class="offer-card" data-offer="المجموعة الكاملة — 799ج">
 <h2>🌟 عرض 2: المجموعة الكاملة</h2>
 <p>799 جنيه فقط – خصم خاص لفترة محدودة</p>
 <div style="background:#fdf2f2;padding:6px;border-radius:8px;">تحتوي على: الماسك + السيروم + الشامبو + البلسم</div>
 </div>
+
 <div class="form-section">
 <p style="color:#b22222;font-weight:bold;text-align:center;">📝 املأ بياناتك، ثم اضغط "تأكيد الطلب الآن" وانتظر قليلاً حتى تظهر رسالة التأكيد ✅</p>
+
 <form id="orderForm">
 <input type="hidden" name="offer" id="selectedOffer" value="الماسك + السيروم — 599ج">
 <input type="text" name="name" placeholder="الاسم الكامل" required>
 <input type="text" name="phone" placeholder="رقم الهاتف" required>
-<select id="city" name="city" required 
-style="width:100%;padding:10px;margin:8px 0;border:1px solid #ccc;border-radius:5px;font-size:15px;">
+
+<select id="city" name="city" required>
   <option value="" disabled selected>اختر المحافظة</option>
   <option value="القاهرة">القاهرة</option>
   <option value="الجيزة">الجيزة</option>
   <option value="الإسكندرية">الإسكندرية</option>
-  <option value="الدقهلية">الدقهلية</option>
-  <option value="البحر الأحمر">البحر الأحمر</option>
-  <option value="البحيرة">البحيرة</option>
-  <option value="الفيوم">الفيوم</option>
-  <option value="الغربية">الغربية</option>
-  <option value="الإسماعيلية">الإسماعيلية</option>
-  <option value="المنوفية">المنوفية</option>
-  <option value="المنيا">المنيا</option>
-  <option value="القليوبية">القليوبية</option>
-  <option value="الوادي الجديد">الوادي الجديد</option>
-  <option value="السويس">السويس</option>
-  <option value="أسوان">أسوان</option>
-  <option value="أسيوط">أسيوط</option>
-  <option value="بني سويف">بني سويف</option>
-  <option value="بورسعيد">بورسعيد</option>
-  <option value="دمياط">دمياط</option>
   <option value="الشرقية">الشرقية</option>
-  <option value="جنوب سيناء">جنوب سيناء</option>
+  <option value="الغربية">الغربية</option>
+  <option value="المنوفية">المنوفية</option>
+  <option value="القليوبية">القليوبية</option>
+  <option value="الدقهلية">الدقهلية</option>
+  <option value="المنيا">المنيا</option>
+  <option value="أسيوط">أسيوط</option>
+  <option value="سوهاج">سوهاج</option>
+  <option value="قنا">قنا</option>
+  <option value="الأقصر">الأقصر</option>
+  <option value="أسوان">أسوان</option>
+  <option value="الإسماعيلية">الإسماعيلية</option>
+  <option value="السويس">السويس</option>
+  <option value="دمياط">دمياط</option>
+  <option value="بورسعيد">بورسعيد</option>
+  <option value="البحيرة">البحيرة</option>
   <option value="كفر الشيخ">كفر الشيخ</option>
   <option value="مطروح">مطروح</option>
-  <option value="الأقصر">الأقصر</option>
-  <option value="قنا">قنا</option>
   <option value="شمال سيناء">شمال سيناء</option>
-  <option value="سوهاج">سوهاج</option>
+  <option value="جنوب سيناء">جنوب سيناء</option>
+  <option value="البحر الأحمر">البحر الأحمر</option>
+  <option value="الوادي الجديد">الوادي الجديد</option>
+  <option value="بني سويف">بني سويف</option>
+  <option value="الفيوم">الفيوم</option>
 </select>
 
 <textarea name="address" placeholder="العنوان الكامل" required></textarea>
+
 <button type="submit" id="submitBtn">✔️ تأكيد الطلب الآن</button>
-  <p id="depositNote" style="
-  margin-top: 12px;
-  font-size: 18px;
-  color: #333;
-  background: #fff8e1;
-  border: 1px solid #f4d03f;
+
+<p style="
+  font-size: 17px;
+  color: #d32f2f;
+  background: #fff3cd;
+  border: 1px solid #f0ad4e;
   padding: 12px;
-  border-radius: 12px;
+  border-radius: 10px;
   text-align: center;
-  font-weight: 500;
-  line-height: 1.8;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-top: 10px;
 ">
-  💳 لتأكيد الحجز بيتم تحويل مبلغ <strong>50ج</strong> جدية حجز على رقم
-  <strong>01002002360</strong> بعد التواصل معكم فى أقرب وقت 📦
+⚠️ بعد تأكيد الطلب سيتم تحويلك تلقائيًا لرسائل الصفحة للتحدث مع احد ممثلى خدمة العملاء حول اى استفسار لديكم او لتاكيد الطلب من خلال خدمة العملاء
 </p>
+
+
 <div class="success" id="successMsg">✅ تم استلام طلبك بنجاح! سيتم التواصل معك قريبًا.</div>
 </form>
 </div>
 </section>
+
 <footer><p>© 2025 Karseell Egypt — جميع الحقوق محفوظة.</p></footer>
 
 <script>
@@ -148,8 +158,16 @@ body:JSON.stringify(data)
 submitBtn.textContent="✅ تم تأكيد طلبك بنجاح!";
 submitBtn.style.background="#2ecc71";
 successMsg.style.display='block';
+
+// تحويل إلى ماسنجر الصفحة بعد ثانية واحدة
+setTimeout(()=>{
+  const message=encodeURIComponent("👋 مرحبًا! من فضلك اختاري أحد الخيارات التالية:\n\n1️⃣ أريد تأكيد الطلب ✅\n2️⃣ عندي استفسار 💬");
+  window.location.href="https://m.me/61571292480489?text="+message;
+},1000);
+
 form.reset();
 });
 </script>
+
 </body>
 </html>
