@@ -136,36 +136,62 @@ const successMsg=document.getElementById('successMsg');
 const submitBtn=document.getElementById('submitBtn');
 
 offers.forEach(offer=>{
-offer.addEventListener('click',()=>{
-offers.forEach(o=>o.classList.remove('selected'));
-offer.classList.add('selected');
-selectedOffer.value=offer.dataset.offer;
-});
+  offer.addEventListener('click',()=>{
+    offers.forEach(o=>o.classList.remove('selected'));
+    offer.classList.add('selected');
+    selectedOffer.value=offer.dataset.offer;
+  });
 });
 
 form.addEventListener('submit',async e=>{
-e.preventDefault();
-submitBtn.disabled=true;
-submitBtn.textContent="⏳ جاري تأكيد الطلب... برجاء الانتظار";
-const data=Object.fromEntries(new FormData(form).entries());
-try{fbq('track','Purchase',{value:599,currency:'EGP'});}catch(e){}
-await fetch('https://script.google.com/macros/s/AKfycbx1VQMlNnYclge3-GtadfovyvYkM7EZIOSYZl9vQbBJmIiZ8w_r0c4OdqZBq7Cux3Zx/exec',{
-method:'POST',
-mode:'no-cors',
-headers:{'Content-Type':'application/json'},
-body:JSON.stringify(data)
-});
-submitBtn.textContent="✅ تم تأكيد طلبك بنجاح!";
-submitBtn.style.background="#2ecc71";
-successMsg.style.display='block';
+  e.preventDefault();
+  submitBtn.disabled=true;
+  submitBtn.textContent="⏳ جاري تأكيد الطلب... برجاء الانتظار";
 
-// تحويل إلى ماسنجر الصفحة بعد ثانية واحدة
-setTimeout(()=>{
-  const message=encodeURIComponent("👋 مرحبًا! من فضلك اختاري أحد الخيارات التالية:\n\n1️⃣ أريد تأكيد الطلب ✅\n2️⃣ عندي استفسار 💬");
-  window.location.href="https://m.me/61571292480489?text="+message;
-},1000);
+  const data=Object.fromEntries(new FormData(form).entries());
 
-form.reset();
+  try {
+    fbq('track','Purchase',{value:599,currency:'EGP'});
+  } catch(e){}
+
+  // إرسال البيانات إلى Google Sheet
+  await fetch('https://script.google.com/macros/s/AKfycbx1VQMlNnYclge3-GtadfovyvYkM7EZIOSYZl9vQbBJmIiZ8w_r0c4OdqZBq7Cux3Zx/exec',{
+    method:'POST',
+    mode:'no-cors',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(data)
+  });
+
+  // تحديث شكل الزر ورسالة النجاح
+  submitBtn.textContent="✅ تم تأكيد طلبك بنجاح!";
+  submitBtn.style.background="#2ecc71";
+  successMsg.style.display='block';
+
+  // تحضير الرسالة التي ستظهر في ماسنجر
+  const name = data.name || "";
+  const phone = data.phone || "";
+  const city = data.city || "";
+  const offer = data.offer || "";
+  const address = data.address || "";
+
+  const message = encodeURIComponent(
+    `👋 مرحبًا! تم تسجيل طلب جديد:\n\n` +
+    `الاسم: ${name}\n` +
+    `رقم الهاتف: ${phone}\n` +
+    `المحافظة: ${city}\n` +
+    `العنوان: ${address}\n` +
+    `العرض: ${offer}\n\n` +
+    `من فضلك اختاري أحد الخيارات التالية:\n` +
+    `1️⃣ أريد تأكيد الطلب ✅\n` +
+    `2️⃣ عندي استفسار 💬`
+  );
+
+  // التحويل إلى ماسنجر بعد ثانية واحدة
+  setTimeout(()=>{
+    window.location.href = "https://m.me/61571292480489?text=" + message;
+  },1000);
+
+  form.reset();
 });
 </script>
 
