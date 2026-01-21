@@ -158,9 +158,10 @@ submitBtn.disabled = true;
 submitBtn.textContent="⏳ جاري تأكيد الطلب... برجاء الانتظار";
 
 const price = Number(selectedOffer.value);
-try {
-fbq('track','Purchase',{ value: price, currency:'EGP' });
-} catch(e){}
+
+setTimeout(() => {
+  fbq('track','Purchase',{ value: price, currency:'EGP' });
+}, 0);
 
 await fetch('https://script.google.com/macros/s/AKfycbx1VQMlNnYclge3-GtadfovyvYkM7EZIOSYZl9vQbBJmIiZ8w_r0c4OdqZBq7Cux3Zx/exec',{
 method:'POST',
