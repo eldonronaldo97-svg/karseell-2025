@@ -160,8 +160,12 @@ submitBtn.textContent="⏳ جاري تأكيد الطلب... برجاء الان
 const price = Number(selectedOffer.value);
 
 setTimeout(() => {
-  fbq('track','Purchase',{ value: price, currency:'EGP' });
-}, 0);
+  fbq('track','Purchase',{
+  value: price,
+  currency:'EGP',
+  eventID: 'order_' + Date.now()
+});
+
 
 await fetch('https://script.google.com/macros/s/AKfycbx1VQMlNnYclge3-GtadfovyvYkM7EZIOSYZl9vQbBJmIiZ8w_r0c4OdqZBq7Cux3Zx/exec',{
 method:'POST',
