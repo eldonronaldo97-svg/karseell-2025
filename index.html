@@ -23,12 +23,6 @@ fbq('track', 'PageView');
 </script>
 <!-- End Facebook Pixel Code -->
 
-<script>
-function generateEventID() {
-  return 'evt_' + Date.now() + '_' + Math.floor(Math.random() * 100000);
-}
-</script>
-
 <style>
 body {font-family:'Cairo',sans-serif;margin:0;background:#fff;color:#222;direction:rtl;}
 header {background:#b22222;color:white;text-align:center;padding:16px;}
@@ -37,8 +31,8 @@ header {background:#b22222;color:white;text-align:center;padding:16px;}
 .offer-card {border:2px solid #ccc;border-radius:10px;padding:12px;text-align:center;margin-bottom:12px;cursor:pointer;}
 .offer-card.selected {border-color:#b22222;background:#fff6f6;}
 .form-section {background:#fafafa;padding:20px;border-radius:12px;border:1px solid #eee;}
-input,textarea,select {width:100%;padding:12px;margin-bottom:12px;border:1px solid #ccc;border-radius:8px;font-size:16px;}
-button {width:100%;background:#b22222;color:white;padding:14px;border:none;border-radius:10px;font-size:18px;cursor:pointer;transition:all 0.3s ease;}
+input,textarea {width:100%;padding:12px;margin-bottom:12px;border:1px solid #ccc;border-radius:8px;font-size:16px;}
+button {width:100%;background:#b22222;color:white;padding:14px;border:none;border-radius:10px;font-size:18px;cursor:pointer;}
 button:disabled {opacity:0.8;cursor:not-allowed;}
 .success {display:none;text-align:center;color:green;font-weight:bold;margin-top:10px;}
 footer {text-align:center;color:#777;font-size:14px;padding:20px;}
@@ -52,7 +46,6 @@ footer {text-align:center;color:#777;font-size:14px;padding:20px;}
 <section class="hero">
 <video autoplay muted loop playsinline style="width:100%;max-width:420px;border-radius:12px;">
   <source src="hero.mp4" type="video/mp4">
-  المتصفح لا يدعم تشغيل الفيديو
 </video>
 <p>احصلي على شعر ناعم وصحي مع مجموعة كارسيل الإيطالية – الحل الأمثل للفرد والترميم والتغذية العميقة.</p>
 </section>
@@ -76,7 +69,6 @@ footer {text-align:center;color:#777;font-size:14px;padding:20px;}
 <div class="form-section">
 <form id="orderForm">
 <input type="hidden" name="offer" id="selectedOffer" value="599">
-
 <input type="text" name="name" placeholder="الاسم الكامل" required>
 <input type="text" name="phone" placeholder="رقم الهاتف" required>
 
@@ -114,9 +106,7 @@ footer {text-align:center;color:#777;font-size:14px;padding:20px;}
 <textarea name="address" placeholder="العنوان الكامل" required></textarea>
 
 <button type="submit" id="submitBtn">✔️ تأكيد الطلب الآن</button>
-<div class="success" id="successMsg">
-✅ تم استلام طلبك بنجاح! سيتم التواصل معك قريبًا.
-</div>
+<div class="success" id="successMsg">✅ تم استلام طلبك بنجاح! سيتم التواصل معك قريبًا.</div>
 </form>
 </div>
 </section>
@@ -130,7 +120,6 @@ const form = document.getElementById('orderForm');
 const successMsg = document.getElementById('successMsg');
 const submitBtn = document.getElementById('submitBtn');
 
-/* منع الحروف – أرقام فقط */
 form.phone.addEventListener('input', () => {
 form.phone.value = form.phone.value.replace(/\D/g,'');
 });
@@ -146,16 +135,8 @@ selectedOffer.value = offer.dataset.offer;
 form.addEventListener('submit', async e=>{
 e.preventDefault();
 
-const phone = form.phone.value.trim();
-
-/* تحقق: 11 رقم ويبدأ بـ 01 */
-if(!/^01\d{9}$/.test(phone)){
-alert('من فضلك أدخل رقم موبايل صحيح يبدأ بـ 01 ومكون من 11 رقم');
-return;
-}
-
 submitBtn.disabled = true;
-submitBtn.textContent="⏳ جاري تأكيد الطلب... برجاء الانتظار";
+submitBtn.textContent="⏳ جاري تأكيد الطلب...";
 
 const price = Number(selectedOffer.value);
 
@@ -166,10 +147,12 @@ headers:{'Content-Type':'application/json'},
 body:JSON.stringify(Object.fromEntries(new FormData(form).entries()))
 });
 
-/* ===== التعديل الوحيد ===== */
-const eventID = generateEventID();
-fbq('track','Purchase',{ value: price, currency:'EGP' },{ eventID:eventID });
-/* ========================= */
+/* ===== Purchase القياسي ===== */
+fbq('track','Purchase',{
+  value: price,
+  currency: 'EGP'
+});
+/* ============================ */
 
 submitBtn.textContent="✅ تم تأكيد طلبك بنجاح!";
 submitBtn.style.background="#2ecc71";
