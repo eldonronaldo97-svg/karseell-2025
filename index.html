@@ -127,14 +127,8 @@ src="data:image/webp;base64,UklGRnjeAABXRUJQVlA4IGzeAACQQwKdASpYAlgCAAAAJZW6Rvds
   <h2>🧴 عرض 2: الماسك + السيروم</h2>
   <p>599 جنيه فقط – شامل الشحن عند الدفع عند الاستلام</p>
 
-</div>
+  </div>
 
-<div class="offer-card" data-offer="599">
-<img 
-style="width:100%;max-width:230px;border-radius:12px;margin-bottom:10px"
-src="data:image/
-<h2>💆‍♀️ عرض 2: الماسك + السيروم</h2>
-<p>599 جنيه فقط – شامل الشحن عند الدفع عند الاستلام</p>
 </div>
 
 <div class="offer-card" data-offer="799">
@@ -267,7 +261,9 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.offer-card').forEach(card => {
     card.addEventListener('click', function () {
 
-      let price = this.getAttribute('data-offer');
+      let price = this.closest('.offer-card').getAttribute('data-offer');
+
+      document.getElementById('selectedOffer').value = price;
       selectedOffer = price;
 
       fbq('track', 'AddToCart', {
