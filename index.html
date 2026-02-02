@@ -301,6 +301,36 @@ header{
   border-radius:12px;
   border:1px solid #eee;
 }
+  .ks-cta-buttons{
+  margin:25px 0;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.ks-main-btn{
+  background:#f59e0b;
+  color:#fff;
+  text-align:center;
+  padding:14px;
+  border-radius:999px;
+  font-size:16px;
+  font-weight:800;
+  text-decoration:none;
+}
+
+.ks-outline-btn{
+  background:#fff7e6;
+  border:2px solid #f59e0b;
+  color:#7a4a00;
+  text-align:center;
+  padding:12px;
+  border-radius:999px;
+  font-size:15px;
+  font-weight:700;
+  text-decoration:none;
+}
+
 
 /* ===== العروض والفورم (زي ما هم) ===== */
 .offer-card{
@@ -407,8 +437,24 @@ footer{
 
 </div>
 
+  <!-- أزرار التنقل -->
+<div class="ks-cta-buttons">
+
+  <!-- زر الطلب -->
+  <a href="#order-form" class="ks-main-btn">
+    اطلبى دلوقتى واستلمى بكرة
+  </a>
+
+  <!-- زر الأسئلة -->
+  <a href="#before-after" class="ks-outline-btn">
+    ❓ عندك أسئلة؟ اقري هنا
+  </a>
+
+</div>
+
+
 <!-- قسم قبل وبعد -->
-<div class="ks-before-after">
+<div class="ks-before-after" id="before-after">
 
   <div class="ks-ba-title">
     قبل وبعد استخدام كارسيل
@@ -589,7 +635,7 @@ src="data:image/webp;base64,UklGRl6xAABXRUJQVlA4IFKxAABQ/wKdASrPAs8CPjEYikQiIaEi
 </div>
 </div>
 
-<div class="form-section">
+<div class="form-section" id="order-form">
   <p style="text-align:center;color:#5a0f1b;font-weight:bold;">
 ✔️ استخدام آمن على الشعر المصبوغ<br>
 ✔️ يُستخدم مرتين في الأسبوع فقط<br>
