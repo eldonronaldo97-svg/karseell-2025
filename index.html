@@ -166,7 +166,80 @@ header{
 .ks-ba-item .highlight{
   color:#d97706;
 }
+.ks-usage{
+  margin:40px 0;
+}
 
+.ks-usage-title{
+  text-align:center;
+  font-size:26px;
+  font-weight:900;
+  color:#1f2937;
+  margin-bottom:8px;
+}
+
+.ks-usage-sub{
+  text-align:center;
+  font-size:15px;
+  color:#6b7280;
+  margin-bottom:25px;
+}
+
+.ks-step{
+  background:#ffffff;
+  border:3px solid #facc15;
+  border-radius:22px;
+  padding:22px 18px 20px;
+  margin-bottom:22px;
+  position:relative;
+}
+
+.ks-step-badge{
+  position:absolute;
+  top:-18px;
+  right:18px;
+  background:#fbbf24;
+  color:#ffffff;
+  padding:8px 16px;
+  border-radius:999px;
+  font-weight:800;
+  font-size:15px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.ks-step-title{
+  font-size:20px;
+  font-weight:800;
+  color:#111827;
+  margin-bottom:10px;
+}
+
+.ks-step-desc{
+  font-size:15px;
+  line-height:1.9;
+  color:#374151;
+}
+
+.ks-step-desc .highlight{
+  color:#d97706;
+  font-weight:800;
+}
+
+/* موبايل */
+@media(max-width:480px){
+  .ks-usage-title{
+    font-size:23px;
+  }
+  .ks-step-title{
+    font-size:18px;
+  }
+  .ks-step-desc{
+    font-size:14px;
+  }
+}
+  
 .ks-value-title{
   font-size:24px;
   font-weight:800;
@@ -384,14 +457,54 @@ footer{
 </div>
 
 
-<!-- القسم 4 -->
-<div class="ks-section">
-  <h2>طريقة الاستخدام الصحيحة</h2>
-  <div class="ks-grid">
-    <div class="ks-box">💧 غسيل وتجهيز الشعر</div>
-    <div class="ks-box">✨ خلط الماسك مع السيروم</div>
-    <div class="ks-box">⏳ الانتظار 10–15 دقيقة</div>
+<!-- قسم طريقة الاستخدام -->
+<div class="ks-usage">
+
+  <div class="ks-usage-title">
+    طريقة الاستخدام الصحيحة
   </div>
+
+  <div class="ks-usage-sub">
+    3 خطوات بسيطة للحصول على أفضل نتيجة من مجموعة كارسيل كولاجين
+  </div>
+
+  <!-- الخطوة 1 -->
+  <div class="ks-step">
+    <div class="ks-step-badge">💧 الخطوة 1</div>
+    <div class="ks-step-title">غسيل وتجهيز الشعر</div>
+    <div class="ks-step-desc">
+      اغسلي شعرك بشامبو مناسب واشطفيه كويس،
+      ثم نشّفيه بالفوطة برفق لحد ما يبقى رطب
+      <strong>مش مبلول</strong>.
+    </div>
+  </div>
+
+  <!-- الخطوة 2 -->
+  <div class="ks-step">
+    <div class="ks-step-badge">✨ الخطوة 2</div>
+    <div class="ks-step-title">خلط الماسك مع السيروم</div>
+    <div class="ks-step-desc">
+      حطّي كمية مناسبة من الماسك في كف إيدك،
+      ثم ضيفي <span class="highlight">3 نقط من السيروم</span>
+      واخلطيهم كويس.
+      وزّعي الخليط من منتصف الشعر للأطراف.
+    </div>
+  </div>
+
+  <!-- الخطوة 3 -->
+  <div class="ks-step">
+    <div class="ks-step-badge">⏳ الخطوة 3</div>
+    <div class="ks-step-title">الانتظار والشطف</div>
+    <div class="ks-step-desc">
+      سيبي الخليط على شعرك من
+      <span class="highlight">10 – 15 دقيقة</span>،
+      ثم اشطفيه كويس بمياه فاترة.
+      هتلاحظي نعومة ولمعان من أول استخدام!
+    </div>
+  </div>
+
+</div>
+
   <p><strong>نصيحة:</strong> استخدميه 2–3 مرات أسبوعياً.</p>
 </div>
 
