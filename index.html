@@ -2,795 +2,361 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>مجموعة كارسيل الأصلية – العناية الكاملة بالشعر</title>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Karseell Collagen</title>
 
-<!-- Facebook Pixel Code -->
+<!-- Facebook Pixel -->
 <script>
 !function(f,b,e,v,n,t,s){
-if(f.fbq)return; n=f.fbq=function(){n.callMethod?
+if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)n=n; n.push=n; n.loaded=!0; n.version='2.0';
-n.queue=[]; t=b.createElement(e); t.async=!0;
-t.src=v; s=b.getElementsByTagName(e)[0];
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)
-}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', '1302281691617529');
-fbq('track', 'PageView');
-fbq('track', 'ViewContent', {
-  content_name: 'Karseell Hair Mask',
-  content_category: 'Hair Care',
-  value: 399,
-  currency: 'EGP'
-});
-</script>
-<!-- End Facebook Pixel Code -->
-
-<style>
-body{font-family:Arial;margin:20px;background:#e9dfc7}
-header {background:#5a0f1b;color:#f2c94c;text-align:center;padding:16px;}
-.hero {text-align:center;padding:10px;}
-.content {max-width:600px;margin:auto;padding:20px;}
-.offer-card {background:#5a0f1b; border:2px solid #f2c94c;border-radius:10px;padding:12px;text-align:center;margin-bottom:12px;cursor:pointer;}
-.offer-card.selected {border-color:#5a0f1b;background:#f2c94c}
-.form-section {background:#e9dfc7;padding:20px;border-radius:12px;border:1px solid #e9dfc7;}
-input,textarea {width:100%;padding:12px;margin-bottom:12px;border:1px solid #5a0f1b;border-radius:8px;font-size:16px;}
-button {width:100%;background:#b22222;color:white;padding:14px;border:none;border-radius:10px;font-size:18px;cursor:pointer;transition:all 0.3s ease;}
-button:disabled {opacity:0.8;cursor:not-allowed;}
-.success {display:none;text-align:center;color:green;font-weight:bold;margin-top:10px;}
-footer {text-align:center;color:#777;font-size:14px;padding:20px;}
-</style>
-</head>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('.offer-card').forEach(card => {
-    card.addEventListener('click', function () {
-      let price = this.getAttribute('data-offer');
-
-      fbq('track', 'AddToCart', {
-        content_name: 'Karseell Offer',
-        value: price,
-        currency: 'EGP'
-      });
-    });
-  });
-});
+fbq('init','1302281691617529');
+fbq('track','PageView');
 </script>
 
-
 <style>
+*{box-sizing:border-box;margin:0;padding:0}
+
 body{
-  font-family:'Cairo',sans-serif;
-  margin:20px;
-  background:#e9dfc7;
+font-family:system-ui,-apple-system,Arial;
+background:#4b0f1b;
+color:#f5f5f5;
+line-height:1.8
 }
-header{
-  background:#5a0f1b;
-  color:#f2c94c;
-  text-align:center;
-  padding:16px;
-  border-radius:12px;
-}
+
+/* HERO */
 .hero{
+text-align:center;
+padding:34px 16px;
+background:linear-gradient(135deg,#3a0c15,#6d1a2a)
+}
+.hero h1{
+color:#f5c16c;
+font-size:26px;
+margin-bottom:8px
+}
+.hero p{
+color:#f1eaea;
+font-size:15px
+}
+
+/* BUTTON */
+.btn{
+display:inline-block;
+margin-top:14px;
+background:#f5c16c;
+color:#3a0c15;
+padding:12px 30px;
+border-radius:30px;
+font-weight:800;
+text-decoration:none
+}
+
+.wrap{
+max-width:900px;
+margin:auto;
+padding:18px
+}
+
+/* ===== سكشن مقسوم نصين ===== */
+.ks-split{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+margin-top:25px
+}
+.ks-box{
+background:#5a1321;
+border-radius:18px;
+padding:22px
+}
+.ks-box h2{
+color:#f5c16c;
+font-size:22px;
+margin-bottom:14px
+}
+.ks-box ul,
+.ks-box ol{
+padding-right:18px;
+font-size:15px
+}
+.ks-box li{
+margin-bottom:8px
+}
+.ks-box ul li::before{
+content:"✔ ";
+color:#22c55e
+}
+.highlight{
+color:#f5c16c;
+font-weight:800
+}
+
+/* عروض */
+  .offers-title{
   text-align:center;
-  padding:15px;
-}
-.content{
-  max-width:720px;
-  margin:auto;
-  padding:20px;
-}
-
-/* ===== الأقسام الجديدة ===== */
-.ks-section{
-  background:#ffffff;
-  border-radius:14px;
-  padding:18px;
-  margin-bottom:18px;
-}
-.ks-section h2{
-  color:#5a0f1b;
-  margin-bottom:10px;
-}
-.ks-list{
-  list-style:none;
-  padding:0;
-}
-.ks-list li{
-  margin-bottom:6px;
-}
-.ks-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:14px;
-}
-  .ks-value{
-  background:transparent;   /* مفيش مربع حوالين القسم */
-  padding:0;                /* نسيب المسافات طبيعية */
-  margin:25px 0;
-}
-.ks-before-after{
-  margin:30px 0;
-}
-
-.ks-ba-title{
-  text-align:center;
-  font-size:28px;
-  font-weight:900;
-  color:#1f2937;
-  margin-bottom:10px;
-}
-
-.ks-ba-sub{
-  text-align:center;
-  font-size:17px;
-  color:#444;
-  line-height:1.8;
-  margin-bottom:22px;
-}
-
-.ks-ba-list{
-  list-style:none;
-  padding:0;
-  margin:0;
-  display:flex;
-  flex-direction:column;
-  gap:14px;
-}
-
-.ks-ba-item{
-  display:flex;
-  align-items:center;
-  gap:12px;
   font-size:18px;
-  font-weight:700;
-  color:#1f2937;
+  font-weight:800;
+  color:#f5c16c;
+  margin:30px 0 10px;
 }
-
-.ks-ba-item .check{
-  width:30px;
-  height:30px;
-  background:#22c55e;
-  color:#fff;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+.offers-trust{
+  text-align:center;
+  margin:15px 0 30px;
   font-size:16px;
-  flex-shrink:0;
-}
-
-.ks-ba-item .highlight{
-  color:#d97706;
-}
-.ks-usage{
-  margin:40px 0;
-}
-
-.ks-usage-title{
-  text-align:center;
-  font-size:26px;
-  font-weight:900;
-  color:#1f2937;
-  margin-bottom:8px;
-}
-
-.ks-usage-sub{
-  text-align:center;
-  font-size:15px;
-  color:#6b7280;
-  margin-bottom:25px;
-}
-
-.ks-step{
-  background:#ffffff;
-  border:3px solid #facc15;
-  border-radius:22px;
-  padding:22px 18px 20px;
-  margin-bottom:22px;
-  position:relative;
-}
-
-.ks-step-badge{
-  position:absolute;
-  top:-18px;
-  right:18px;
-  background:#fbbf24;
-  color:#ffffff;
-  padding:8px 16px;
-  border-radius:999px;
   font-weight:800;
-  font-size:15px;
-  display:flex;
-  align-items:center;
-  gap:6px;
+  color:#f5c16c;
 }
 
-.ks-step-title{
-  font-size:20px;
-  font-weight:800;
-  color:#111827;
-  margin-bottom:10px;
+.offers{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:14px;
+margin-top:25px
+}
+.offer{
+border:1px solid #7a1f30;
+border-radius:14px;
+padding:12px;
+text-align:center;
+cursor:pointer;
+transition:.2s;
+background:#5a1321
+}
+.offer.active{
+border-color:#f5c16c;
+background:#6d1a2a
+}
+.offer img{
+width:100%;
+border-radius:12px;
+margin-bottom:8px
+}
+.offer h3{
+color:#f5c16c;
+font-size:16px
+}
+.offer p{
+color:#f5f5f5
 }
 
-.ks-step-desc{
-  font-size:15px;
-  line-height:1.9;
-  color:#374151;
+/* فورم */
+form{
+background:#5a1321;
+border-radius:18px;
+padding:22px;
+margin-top:25px
+}
+input,select,textarea,button{
+width:100%;
+padding:12px;
+border-radius:10px;
+border:none;
+margin-bottom:10px;
+font-size:14px
+}
+input,select,textarea{
+background:#fff;
+color:#000
+}
+button{
+background:#f5c16c;
+color:#3a0c15;
+font-weight:800;
+cursor:pointer
+}
+.success{
+display:none;
+color:#22c55e;
+font-weight:800;
+text-align:center
 }
 
-.ks-step-desc .highlight{
-  color:#d97706;
-  font-weight:800;
+footer{
+text-align:center;
+color:#e2cfcf;
+font-size:13px;
+padding:15px
 }
 
 /* موبايل */
-@media(max-width:480px){
-  .ks-usage-title{
-    font-size:23px;
-  }
-  .ks-step-title{
-    font-size:18px;
-  }
-  .ks-step-desc{
-    font-size:14px;
-  }
+@media(max-width:768px){
+.ks-split{
+grid-template-columns:1fr
 }
-  
-.ks-value-title{
-  font-size:24px;
-  font-weight:800;
-  line-height:1.6;
-  text-align:center;
-  color:#1f2937;
-  margin-bottom:14px;
-}
-
-.ks-value-title span{
-  color:#d97706;
-}
-
-.ks-value-desc{
-  text-align:center;
-  font-size:16px;
-  line-height:1.8;
-  color:#444;
-  margin-bottom:20px;
-}
-
-.ks-value-list{
-  list-style:none;
-  padding:0;
-  margin:0;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-
-.ks-value-item{
-  background:#fff8dc;
-  border:2px solid #facc15;
-  border-radius:14px;
-  padding:14px 16px;
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-weight:700;
-  color:#6b3f00;
-}
-
-.ks-check{
-  width:26px;
-  height:26px;
-  background:#22c55e;
-  color:#fff;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:15px;
-  flex-shrink:0;
-}
-
-.ks-box{
-  background:#fff7e6;
-  padding:14px;
-  border-radius:12px;
-  border:1px solid #eee;
-}
-  .ks-cta-buttons{
-  margin:25px 0;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-
-.ks-main-btn{
-  background:#f59e0b;
-  color:#fff;
-  text-align:center;
-  padding:14px;
-  border-radius:999px;
-  font-size:16px;
-  font-weight:800;
-  text-decoration:none;
-}
-
-.ks-outline-btn{
-  background:#fff7e6;
-  border:2px solid #f59e0b;
-  color:#7a4a00;
-  text-align:center;
-  padding:12px;
-  border-radius:999px;
-  font-size:15px;
-  font-weight:700;
-  text-decoration:none;
-}
-
-
-/* ===== العروض والفورم (زي ما هم) ===== */
-.offer-card{
-  background:#5a0f1b;
-  border:2px solid #f2c94c;
-  border-radius:10px;
-  padding:12px;
-  text-align:center;
-  margin-bottom:12px;
-  cursor:pointer;
-}
-.offer-card.selected{
-  background:#f2c94c;
-  border-color:#5a0f1b;
-}
-.form-section{
-  background:#e9dfc7;
-  padding:20px;
-  border-radius:12px;
-  border:1px solid #e9dfc7;
-}
-input,textarea,select{
-  width:100%;
-  padding:12px;
-  margin-bottom:12px;
-  border:1px solid #5a0f1b;
-  border-radius:8px;
-  font-size:15px;
-}
-button{
-  width:100%;
-  background:#b22222;
-  color:#fff;
-  padding:14px;
-  border:none;
-  border-radius:10px;
-  font-size:18px;
-  cursor:pointer;
-}
-footer{
-  text-align:center;
-  color:#777;
-  font-size:14px;
-  padding:20px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>✨ الحل الأكيد لكل مشاكل شعرك</h1>
-  <p>مجموعة كارسيل كولاجين – نعومة ولمعان من أول استخدام</p>
-</header>
-
-<!--
-<video autoplay muted loop playsinline style="width:100%;max-width:420px;border-radius:12px;">
-  <source src="hero.mp4" type="video/mp4">
-</video>
--->
-
-  <img 
-  src="image1.jpg"
-  alt="مجموعة كارسيل كولاجين لفرد وتنعيم الشعر"
-  loading="eager"
-  style="width:100%;max-width:420px;border-radius:12px;display:block;margin:0 auto;">
-
-  
-<section class="content">
-
-<!-- القسم 1 (بعد التعديل فقط) -->
-<div class="ks-section ks-value">
-
-  <div class="ks-value-title">
-    شعرك تالف ومتقصف وهايش؟
-    <span>كارسيل كولاجين</span>
-    هيرجعه ناعم وحيوي في أسبوعين بس!
-  </div>
-
-  <div class="ks-value-desc">
-    ماسك + سيروم كولاجين وزيوت طبيعية 100%  
-    بيعالج التقصف والهيشان من أول استخدام،  
-    ويحمي شعرك من الحرارة والتصفيف اليومي.
-  </div>
-
-  <ul class="ks-value-list">
-    <li class="ks-value-item">
-      <span class="ks-check">✓</span>
-      يصلح التلف من الجذور للأطراف
-    </li>
-    <li class="ks-value-item">
-      <span class="ks-check">✓</span>
-      ينفع لكل أنواع الشعر حتى المصبوغ
-    </li>
-    <li class="ks-value-item">
-      <span class="ks-check">✓</span>
-      نعومة ولمعان فوري من أول مرة
-    </li>
-    <li class="ks-value-item">
-      <span class="ks-check">✓</span>
-      طبيعي وآمن 100% بدون كيماويات
-    </li>
-  </ul>
-
+<!-- HERO -->
+<div class="hero">
+<h1>نعومة ولمعان من أول استخدام</h1>
+<p>مجموعة كارسيل كولاجين – حل فعلي لمشاكل الشعر</p>
+<a href="#order" class="btn">اطلبي دلوقتي</a>
 </div>
 
-  <!-- أزرار التنقل -->
-<div class="ks-cta-buttons">
+<div class="wrap">
 
-  <!-- زر الطلب -->
-  <a href="#order-form" class="ks-main-btn">
-    اطلبى دلوقتى واستلمى بكرة
-  </a>
+<!-- سكشن مقسوم نصين -->
+<section class="ks-split">
 
-  <!-- زر الأسئلة -->
-  <a href="#before-after" class="ks-outline-btn">
-    ❓ عندك أسئلة؟ اقري هنا
-  </a>
-
-</div>
-
-
-<!-- قسم قبل وبعد -->
-<div class="ks-before-after" id="before-after">
-
-  <div class="ks-ba-title">
-    قبل وبعد استخدام كارسيل
+  <div class="ks-box">
+    <h2>ليه كارسيل؟</h2>
+    <ul>
+      <li>يصلّح التلف من الجذور للأطراف</li>
+      <li>ينفع لكل أنواع الشعر حتى المصبوغ</li>
+      <li>نعومة ولمعان من أول استخدام</li>
+      <li>طبيعي وآمن 100% بدون كيماويات</li>
+    </ul>
   </div>
 
-  <div class="ks-ba-sub">
-    ⭐ نتائج واضحة من أول استخدام!<br>
-    شاهدي التحول الحقيقي للشعر من تالف وهايش لناعم وحيوي<br>
-    بعد استخدام مجموعة كارسيل كولاجين
+  <div class="ks-box">
+    <h2>طريقة الاستخدام</h2>
+    <ol>
+      <li>اغسلي شعرك بشامبو مناسب وسيبيه رطب</li>
+      <li>اخلطي الماسك مع <span class="highlight">3 نقط سيروم</span></li>
+      <li>وزّعيه من المنتصف للأطراف</li>
+      <li>سيبيه <span class="highlight">10–15 دقيقة</span> واغسلي بماء فاتر</li>
+    </ol>
   </div>
 
-  <ul class="ks-ba-list">
-    <li class="ks-ba-item">
-      <span class="check">✓</span>
-      <span>
-        <span class="highlight">شعر أنعم وأكثر حيوية</span>
-        – ملمس حريري من أول مرة
-      </span>
-    </li>
-
-    <li class="ks-ba-item">
-      <span class="check">✓</span>
-      <span>
-        <span class="highlight">تقليل الهيشان والتقصف</span>
-        – شعر منضبط وسهل التصفيف
-      </span>
-    </li>
-
-    <li class="ks-ba-item">
-      <span class="check">✓</span>
-      <span>
-        <span class="highlight">لمعان ونعومة طبيعية</span>
-        – بدون مواد كيميائية ضارة
-      </span>
-    </li>
-
-    <li class="ks-ba-item">
-      <span class="check">✓</span>
-      <span>
-        <span class="highlight">نتائج تدوم طويلًا</span>
-        – تحسن مستمر مع كل استخدام
-      </span>
-    </li>
-  </ul>
-
-</div>
-
-
-<!-- قسم طريقة الاستخدام -->
-<div class="ks-usage">
-
-  <div class="ks-usage-title">
-    طريقة الاستخدام الصحيحة
-  </div>
-
-  <div class="ks-usage-sub">
-    3 خطوات بسيطة للحصول على أفضل نتيجة من مجموعة كارسيل كولاجين
-  </div>
-
-  <!-- الخطوة 1 -->
-  <div class="ks-step">
-    <div class="ks-step-badge">💧 الخطوة 1</div>
-    <div class="ks-step-title">غسيل وتجهيز الشعر</div>
-    <div class="ks-step-desc">
-      اغسلي شعرك بشامبو مناسب واشطفيه كويس،
-      ثم نشّفيه بالفوطة برفق لحد ما يبقى رطب
-      <strong>مش مبلول</strong>.
-    </div>
-  </div>
-
-  <!-- الخطوة 2 -->
-  <div class="ks-step">
-    <div class="ks-step-badge">✨ الخطوة 2</div>
-    <div class="ks-step-title">خلط الماسك مع السيروم</div>
-    <div class="ks-step-desc">
-      حطّي كمية مناسبة من الماسك في كف إيدك،
-      ثم ضيفي <span class="highlight">3 نقط من السيروم</span>
-      واخلطيهم كويس.
-      وزّعي الخليط من منتصف الشعر للأطراف.
-    </div>
-  </div>
-
-  <!-- الخطوة 3 -->
-  <div class="ks-step">
-    <div class="ks-step-badge">⏳ الخطوة 3</div>
-    <div class="ks-step-title">الانتظار والشطف</div>
-    <div class="ks-step-desc">
-      سيبي الخليط على شعرك من
-      <span class="highlight">10 – 15 دقيقة</span>،
-      ثم اشطفيه كويس بمياه فاترة.
-      هتلاحظي نعومة ولمعان من أول استخدام!
-    </div>
-  </div>
-
-</div>
-
-  <p><strong>نصيحة:</strong> استخدميه 2–3 مرات أسبوعياً.</p>
-</div>
-
-<!-- القسم 5 -->
-<div class="ks-section">
-  <h2>رأي عملائنا</h2>
-  <p><strong>مروة أحمد – القاهرة</strong> ★★★★★</p>
-  <p><strong>نورهان محمد – الإسكندرية</strong> ★★★★★</p>
-  <p><strong>هدى حسن – صاحبة صالون</strong> ★★★★★</p>
-</div>
-<section class="content">
-<p style="text-align:center;font-weight:bold;color:#5a0f1b;">
-✨ اختاري العرض المناسب واستمتعي بفرد يدوم شهور ✨
-</p>
-<!-- ====== CSS ====== -->
-<style>
-.offer-card{
-  position:relative;
-  border:2px solid #f2c94c;
-  border-radius:12px;
-  padding:14px;
-  text-align:center;
-  margin-bottom:14px;
-  background:#5a0f1b;
-}
-
-.offer-card img{
-  width:100%;
-  max-width:230px;
-  border-radius:12px;
-  margin-bottom:10px;
-}
-
-.badge-corner{
-  position:absolute;
-  top:8px;
-  right:8px;
-  background:#f2c94c; /* نفس الأصفر اللي على العلبة */
-  color:#000;
-  padding:4px 10px;
-  font-size:13px;
-  font-weight:bold;
-  border-radius:6px;
-  border:1px solid #000;
-}
-</style>
-
-<!-- ====== كارت العرض (رقم 1 – الأكثر مبيعًا) ====== -->
-<div class="offer-card selected" data-offer="399">
-
-  <span class="badge-corner">🔥 الأكثر مبيعًا</span>
-
-  <img 
-  src="offer1.jpg"
-  style="width:100%;max-width:230px;border-radius:12px;margin-bottom:10px"
-  alt="عرض 1 كارسيل"
-  loading="lazy">
-  <h2>🧴 عرض 1: الماسك الأصلي</h2>
-<p>
-فرد وتنعيم واضح من أول استخدام<br>
-<strong>399 جنيه</strong> – شامل الشحن والدفع عند الاستلام
+</section>
+<p class="offers-title">
+✨ اختاري العرض المناسب ليكي واستمتعي بشعر ناعم وصحي من أول استخدام
 </p>
 
+<!-- العروض -->
+<section class="offers">
+
+<div class="offer active" data-price="599">
+<img src="offer2.jpg" loading="lazy" alt="">
+<h3>عرض 1 / ماسك + سيروم</h3>
+<p>599 جنيه</p>
 </div>
 
-<div class="offer-card" data-offer="599">
-<img 
-  src="offer2.jpg"
-  style="width:100%;max-width:230px;border-radius:12px;margin-bottom:10px"
-  alt="عرض 2 كارسيل"
-  loading="lazy">
-
-  <h2>🧴 عرض 2: الماسك + السيروم</h2>
-  <p>599 جنيه فقط – شامل الشحن و الدفع عند الاستلام</p>
-
-  </div>
-
+<div class="offer" data-price="799">
+<img src="offer3.jpg" loading="lazy" alt="">
+<h3>عرض 2 / المجموعة كاملة</h3>
+<p>799 جنيه</p>
 </div>
 
-<div class="offer-card" data-offer="799">
-<img 
-  src="offer3.jpg"
-  style="width:100%;max-width:230px;border-radius:12px;margin-bottom:10px"
-  alt="عرض 3 كارسيل"
-  loading="lazy">
-<h2>🌟 عرض 3: المجموعة الكاملة</h2>
-<p>799 جنيه فقط – خصم خاص لفترة محدودة</p>
-<div style="background:#fdf2f2;padding:6px;border-radius:8px;">
-تحتوي على: الماسك + السيروم + الشامبو + البلسم
-</div>
-</div>
-
-<div class="form-section" id="order-form">
-  <p style="text-align:center;color:#5a0f1b;font-weight:bold;">
-✔️ استخدام آمن على الشعر المصبوغ<br>
-✔️ يُستخدم مرتين في الأسبوع فقط<br>
-✔️ نتيجة تدوم لحد 6 شهور
+</section>
+<p class="offers-trust">
+💎 كل العروض أصلية 100% والشحن مجانا فى حالة الاستلام
 </p>
 
-<p style="color:#b22222;font-weight:bold;text-align:center;">
-📝 املأ بياناتك، ثم اضغط "تأكيد الطلب الآن" وانتظر قليلاً حتى تظهر رسالة التأكيد ✅
-</p>
-
+<!-- الفورم -->
+<section id="order">
 <form id="orderForm">
-<input type="hidden" name="offer" id="selectedOffer" value="599">
+<input type="hidden" id="selectedOffer" name="offer" value="599">
 
-<input type="text" name="name" placeholder="الاسم الكامل" required>
-<input type="text" name="phone" placeholder="رقم الهاتف" required>
+<input name="name" placeholder="الاسم الكامل" required>
+<input name="phone" placeholder="رقم الموبايل" required>
 
-<select id="city" name="city" required
-style="width:100%;padding:10px;margin:8px 0;border:1px solid #ccc;border-radius:5px;font-size:15px;">
+<select name="city" required>
 <option value="" disabled selected>اختر المحافظة</option>
-<option value="القاهرة">القاهرة</option>
-<option value="الجيزة">الجيزة</option>
-<option value="الإسكندرية">الإسكندرية</option>
-<option value="الدقهلية">الدقهلية</option>
-<option value="البحر الأحمر">البحر الأحمر</option>
-<option value="البحيرة">البحيرة</option>
-<option value="الفيوم">الفيوم</option>
-<option value="الغربية">الغربية</option>
-<option value="الإسماعيلية">الإسماعيلية</option>
-<option value="المنوفية">المنوفية</option>
-<option value="المنيا">المنيا</option>
-<option value="القليوبية">القليوبية</option>
-<option value="الوادي الجديد">الوادي الجديد</option>
-<option value="السويس">السويس</option>
-<option value="أسوان">أسوان</option>
-<option value="أسيوط">أسيوط</option>
-<option value="بني سويف">بني سويف</option>
-<option value="بورسعيد">بورسعيد</option>
-<option value="دمياط">دمياط</option>
-<option value="الشرقية">الشرقية</option>
-<option value="جنوب سيناء">جنوب سيناء</option>
-<option value="كفر الشيخ">كفر الشيخ</option>
-<option value="مطروح">مطروح</option>
-<option value="الأقصر">الأقصر</option>
-<option value="قنا">قنا</option>
-<option value="شمال سيناء">شمال سيناء</option>
-<option value="سوهاج">سوهاج</option>
+<option>القاهرة</option><option>الجيزة</option><option>الإسكندرية</option>
+<option>الدقهلية</option><option>الشرقية</option><option>الغربية</option>
+<option>المنوفية</option><option>القليوبية</option><option>البحيرة</option>
+<option>دمياط</option><option>بورسعيد</option><option>الإسماعيلية</option>
+<option>السويس</option><option>الفيوم</option><option>بني سويف</option>
+<option>المنيا</option><option>أسيوط</option><option>سوهاج</option>
+<option>قنا</option><option>الأقصر</option><option>أسوان</option>
+<option>مطروح</option><option>البحر الأحمر</option>
+<option>الوادي الجديد</option><option>شمال سيناء</option><option>جنوب سيناء</option>
 </select>
 
-<textarea name="address" placeholder="العنوان الكامل" required></textarea>
+<textarea name="address" placeholder="العنوان" required></textarea>
 
-<button type="submit" id="submitBtn">✔️ تأكيد الطلب الآن</button>
-<div class="success" id="successMsg">
-✅ تم استلام طلبك بنجاح! سيتم التواصل معك قريبًا.
-</div>
+<button id="submitBtn">تأكيد الطلب</button>
+<div class="success" id="successMsg">✅ تم تسجيل طلبك بنجاح</div>
 </form>
-</div>
 </section>
 
-<footer><p>© 2025 Karseell Egypt — جميع الحقوق محفوظة.</p></footer>
+</div>
+
+<footer>© Karseell Egypt</footer>
 
 <script>
-const offers = document.querySelectorAll('.offer-card');
-const selectedOffer = document.getElementById('selectedOffer');
-const form = document.getElementById('orderForm');
-const successMsg = document.getElementById('successMsg');
-const submitBtn = document.getElementById('submitBtn');
+document.addEventListener("DOMContentLoaded", function () {
 
-/* منع الحروف – أرقام فقط */
-form.phone.addEventListener('input', () => {
-form.phone.value = form.phone.value.replace(/\D/g,'');
-});
+  const offers = document.querySelectorAll('.offer');
+  const selectedInput = document.getElementById('selectedOffer');
+  const form = document.getElementById('orderForm');
+  const successMsg = document.getElementById('successMsg');
+  const submitBtn = document.getElementById('submitBtn');
 
-offers.forEach(offer=>{
-offer.addEventListener('click',()=>{
-offers.forEach(o=>o.classList.remove('selected'));
-offer.classList.add('selected');
-selectedOffer.value = offer.dataset.offer;
-});
-});
+  // تفعيل أول عرض تلقائي
+  if (offers.length > 0) {
+    offers[0].classList.add('active');
+    selectedInput.value = offers[0].dataset.price;
+  }
 
-form.addEventListener('submit', async e=>{
-e.preventDefault();
+  // تغيير العرض عند الضغط
+  offers.forEach(offer => {
+    offer.addEventListener('click', function () {
 
-const phone = form.phone.value.trim();
+      offers.forEach(o => o.classList.remove('active'));
+      this.classList.add('active');
 
-/* تحقق: 11 رقم ويبدأ بـ 01 */
-if(!/^01\d{9}$/.test(phone)){
-alert('من فضلك أدخل رقم موبايل صحيح يبدأ بـ 01 ومكون من 11 رقم');
-return;
-}
-
-submitBtn.disabled = true;
-submitBtn.textContent="⏳ جاري تأكيد الطلب... برجاء الانتظار";
-
-const price = Number(selectedOffer.value);
-try {
-fbq('track','Purchase',{ value: price, currency:'EGP' });
-} catch(e){}
-
-await fetch('https://script.google.com/macros/s/AKfycbx1VQMlNnYclge3-GtadfovyvYkM7EZIOSYZl9vQbBJmIiZ8w_r0c4OdqZBq7Cux3Zx/exec',{
-method:'POST',
-mode:'no-cors',
-headers:{'Content-Type':'application/json'},
-body:JSON.stringify(Object.fromEntries(new FormData(form).entries()))
-});
-
-submitBtn.textContent="✅ تم تأكيد طلبك بنجاح!";
-submitBtn.style.background="#2ecc71";
-successMsg.style.display='block';
-trackPurchase();
-form.reset();
-});
-</script>
-
-<script>
-/* السعر الافتراضي */
-let selectedOffer = 399;
-
-document.addEventListener('DOMContentLoaded', function () {
-
-  /* AddToCart عند اختيار العرض */
-  document.querySelectorAll('.offer-card').forEach(card => {
-    card.addEventListener('click', function () {
-
-      let price = this.closest('.offer-card').getAttribute('data-offer');
-
-      document.getElementById('selectedOffer').value = price;
-      selectedOffer = price;
+      selectedInput.value = this.dataset.price;
 
       fbq('track', 'AddToCart', {
         content_name: 'Karseell Offer',
-        value: price,
+        value: this.dataset.price,
         currency: 'EGP'
       });
 
     });
   });
 
-});
-
-/* Purchase عند نجاح الطلب */
-function trackPurchase() {
-  fbq('track', 'Purchase', {
-    value: selectedOffer,
-    currency: 'EGP'
+  /* منع الحروف – أرقام فقط */
+  form.phone.addEventListener('input', () => {
+    form.phone.value = form.phone.value.replace(/\D/g,'');
   });
-}
+
+  /* إرسال الفورم */
+  form.addEventListener('submit', async e=>{
+    e.preventDefault();
+
+    const phone = form.phone.value.trim();
+
+    if(!/^01\d{9}$/.test(phone)){
+      alert('من فضلك أدخل رقم موبايل صحيح يبدأ بـ 01 ومكون من 11 رقم');
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent="⏳ جاري تأكيد الطلب... برجاء الانتظار";
+
+    const price = Number(selectedInput.value);
+
+    try {
+      fbq('track','Purchase',{ value: price, currency:'EGP' });
+    } catch(e){}
+
+    await fetch('https://script.google.com/macros/s/AKfycbx1VQMlNnYclge3-GtadfovyvYkM7EZIOSYZl9vQbBJmIiZ8w_r0c4OdqZBq7Cux3Zx/exec',{
+      method:'POST',
+      mode:'no-cors',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(Object.fromEntries(new FormData(form).entries()))
+    });
+
+    submitBtn.textContent="✅ تم تأكيد طلبك بنجاح!";
+    submitBtn.style.background="#2ecc71";
+    successMsg.style.display='block';
+    form.reset();
+  });
+
+});
 </script>
 
 </body>
